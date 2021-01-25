@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="left">
+    <img src="https://i.imgur.com/cMy8V5j.png" alt="user" width="300px">
+    <!-- <h4>{{ account.firstName}} {{ account.lastName }} </h4> -->
+    <p>Hoa Rơi Cửa Phật, Vạn Sự Tuỳ Duyên</p>
+  </div>
+  <div class="right">
+    <div class="info">
+      <h3 style="color: red;">Information</h3>
+      <div class="info_data">
+        <div class="data">
+          <h4>Họ</h4>
+          <!-- <p>{{ account.firstName }}</p> -->
+        </div>
+        <div class="data">
+          <h4>Tên</h4>
+          <!-- <p>{{ account.lastName }}</p> -->
+        </div>
+        <div class="data">
+          <h4>Tuổi</h4>
+          <!-- <p>{{ account.age }}</p> -->
+        </div>
+      </div>
+      <div class="info_data">
+        <div class="data">
+          <h4>Địa chỉ</h4>
+          <!-- <p>{{ account.address }}</p> -->
+        </div>
+        <div class="data">
+          <h4>SĐT</h4>
+          <!-- <p>{{ account.phone}}</p> -->
+        </div>
+        <div class="data">
+          <h4>Chức vụ</h4>
+          <!-- <p>{{ account.role }}</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="projects">
+      <h3 style="color: red;">Account</h3>
+      <div class="projects_data">
+        <div class="data">
+          <h4>Email</h4>
+          <!-- <p>{{ account.email }}</p> -->
+        </div>
+        <div class="data">
+          <h4>Mật khẩu</h4>
+          <!-- <p>{{ account.password }}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="save" class="profile__btn profile-btn-save btn-luu" type="submit" (click)="Save()">
+    Lưu
+  </button>
+  <button id="modify" class="profile__btn profile-btn-modify btn-cs" type="submit" (click)="Modify()">
+    Chỉnh sửa
+  </button>
+  <button id="cancel"class="profile__btn btn-huy" type="submit" (click)="Cancel()">
+    Huỷ
+  </button>
+</div>

@@ -1,0 +1,72 @@
+
+<div class="border-form">
+  <div>
+    <h1>Tạo kì thi</h1>
+
+    <form id="form-createExam">
+      <div class="contentform">
+        <div class="leftcontact">
+          <div class="form-group">
+            <p>Mã môn<span>*</span></p>
+            <span class="icon-case"><i class="fa fa-edit"></i></span>
+            <input type="text" id="examId" name="nom"  data-rule="required" #examId/>
+            <span class="valid"><i class="fa fa-check-circle"></i></span>
+            <div class="message"></div>
+          </div>
+
+          <div class="form-group">
+            <p>Tên môn<span>*</span></p>
+            <span class="icon-case"><i class="fa fa-edit"></i></span>
+            <input type="text" name="prenom" id="nameExam"data-rule="required" #nameExam/>
+            <span class="valid"><i class="fa fa-check-circle"></i></span>
+            <div class="message"></div>
+          </div>
+        </div>
+
+        <div class="rightcontact">
+          <div class="form-group">
+            <p>Số lượng <span>*</span></p>
+            <span class="icon-case"><i class="fa fa-edit"></i></span>
+            <input type="text" id="amountExam" name="ville"data-rule="required" #amountExam/>
+            <span class="valid"><i class="fa fa-check-circle"></i></span>
+            <div class="message"></div>
+          </div>
+
+          <div class="form-group">
+            <p>Ngày thi <span>*</span></p>
+            <span class="icon-case"><i class="fa fa-edit"></i></span>
+            <input type="date"id="dateExam" name="phone" data-rule="maxlen:10" #dateExam/>
+            <span class="valid"><i class="fa fa-check-circle"></i></span>
+            <div class="message"></div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="button-contact" (click)="createExam(examId.value, nameExam.value, amountExam.value, dateExam.value)" [routerLink]="['/create-exam-detail']">Tạo kì thi</button>
+
+    </form>
+  </div>
+
+</div>
+
+<!-- toast-->
+<div id="toast1">
+  <!-- <div class="toast1">
+    <div class="toast__icon">
+      <i class="fa fa-check-circle"></i>
+    </div>
+    <div class="toast__body">
+      <h4 class="toast__title">Tạo thành công</h4>
+      <p class="toast__msg">Đã thêm kì thi vào danh sách</p>
+    </div>
+    <div class="toast__close">
+      <i class="fa fa-times"></i>
+    </div>
+  </div> -->
+</div>
+
+
+
+
+
+
+

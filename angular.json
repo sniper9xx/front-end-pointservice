@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "point-service"
+  "defaultProject": "point-service",
+  "cli": {
+    "analytics": false
+  }
 }

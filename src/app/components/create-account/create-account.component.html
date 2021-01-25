@@ -1,0 +1,81 @@
+<div class="border-form">
+  <div>
+    <h1>Tạo tài khoản</h1>
+
+    <form>
+
+     <div class="contentform">
+       <div class="leftcontact">
+             <div class="form-group">
+               <p>Họ<span>*</span></p>
+               <span class="icon-case"><i class="fa fa-male"></i></span>
+                 <input type="text" name="nom" id="nom" #firstName/>
+                 <div class="validation"></div>
+        </div>
+
+             <div class="form-group">
+             <p>Tên<span>*</span></p>
+             <span class="icon-case"><i class="fa fa-user"></i></span>
+         <input type="text" name="prenom" id="prenom" #lastName/>
+                 <div class="validation"></div>
+       </div>
+
+       <div class="form-group">
+       <p>Tuổi <span>*</span></p>
+       <span class="icon-case"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+                 <input type="email" name="email" id="email" #age/>
+                 <div class="validation"></div>
+       </div>
+
+       <div class="form-group">
+        <p>Địa chỉ <span>*</span></p>
+        <span class="icon-case"><i class="fa fa-home"></i></span>
+          <input type="text" name="ville" id="ville" #address/>
+                  <div class="validation"></div>
+        </div>
+
+    </div>
+
+    <div class="rightcontact">
+
+      <div class="form-group">
+        <p>Chức vụ <span>*</span></p>
+        <span class="icon-case"><i class="fa fa-info"></i></span>
+                  <input type="text" name="fonction" id="fonction" #role/>
+                  <div class="validation"></div>
+        </div>
+
+       <div class="form-group">
+       <p>Email <span>*</span></p>
+       <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+         <input type="text" name="phone" id="phone" #email/>
+                 <div class="validation"></div>
+       </div>
+
+       <div class="form-group">
+        <p>Mật khẩu <span>*</span></p>
+        <span class="icon-case"><i class="fa fa-key"></i></span>
+                  <input type="text" name="sujet" id="sujet" #password/>
+                  <div class="validation"></div>
+        </div>
+
+       <div class="form-group">
+       <p>Nhập lại mật khẩu <span>*</span></p>
+       <span class="icon-case"><i class="fa fa-key"></i></span>
+                 <input type="text" name="sujet" id="sujet" #confirmPassword/>
+                 <div class="validation"></div>
+       </div>
+
+    </div>
+    </div>
+
+      <button type="submit" class="bouton-contact"
+      (click)="createAccount(firstName.value, lastName.value, age.value, address.value, role.value, email.value, password.value, confirmPassword)"
+      >Tạo tài khoản</button>
+
+
+    </form>
+  </div>
+</div>
+
+

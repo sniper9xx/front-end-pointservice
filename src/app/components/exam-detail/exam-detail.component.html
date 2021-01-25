@@ -1,0 +1,83 @@
+
+<div class="test">
+  <div class="info-item">
+    <label for="" class="info-title">Giáo viên: </label>
+    <span class="info-main">Trần Văn A</span>
+  </div>
+  <div class="info-exam">
+  <span class="info-item">
+    <label for="" class="info-title">Mã môn học: </label>
+    <span class="info-main">{{ exam.idExam }}</span>
+  </span>
+  <span class="info-item">
+    <label for="" class="info-title">Tên môn học: </label>
+    <span class="info-main">{{ exam.nameExam }}</span>
+  </span>
+  <span class="info-item">
+    <label for="" class="info-title">Số lượng: </label>
+    <span class="info-main">{{ exam.amountExam }}</span>
+  </span>
+  <span class="info-item">
+    <label for="" class="info-title">Ngày thi: </label>
+    <span class="info-main">{{ exam.dateExam | date:'dd/MM/y' }}</span>
+  </span>
+</div>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Tìm kiếm
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button" (click)="search('1')">Họ và tên</button>
+    <button class="dropdown-item" type="button" (click)="search('2')">Mã số</button>
+  </div>
+</div>
+<div *ngIf="check == 1" class="search-exam">
+    <label class="search-item"> Mã môn học</label>
+    <input class="search-item" type="text">
+</div>
+<div *ngIf="check == 2" class="search-exam">
+  <label class="search-item"> Tên môn học</label>
+  <input class="search-item" type="text">
+</div>
+  <table class="content-table">
+      <thead>
+          <th>STT</th>
+          <th (click)="onSort('name')">Họ và tên &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('classDetail')">Lớp</th>
+          <th (click)="onSort('testMark1')">Kiểm tra 1 &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('testMark2')">Kiểm tra 2 &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('pointProcess')">Điểm quá trình &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('testFinal')">Điểm thi &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th>Điều chỉnh</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of ExamDetail | examDetail :sortBy : sortValue; let i = index">
+              <td> {{ i + 1}}</td>
+              <td> {{ item.name }}</td>
+              <td>{{ item.classExam }}</td>
+              <td>{{ item.testMark1 }}</td>
+              <td>{{ item.testMark2 }}</td>
+              <td>{{ item.pointProcess }}</td>
+              <td>{{ item.testFinal }}</td>
+              <td>
+                <a href=""><i class="fa fa-user-times"></i> </a>
+                &nbsp; &nbsp;
+                <a href=""><i class="fa fa-edit"></i></a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
+
+
+
+
+

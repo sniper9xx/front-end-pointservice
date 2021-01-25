@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.home-page {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 200px;
+}
+
+.message-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(222, 83, 28);
+}
+
+.message {
+    font-size: 20px;
+    padding: 10px 10px;
+    background-color: #d3dedf;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.message:hover {
+    opacity: 0.5;
+}
+
+/* .message-danger {
+    color : #e74a3b;
+    background-color: rgb(239,223,223);
+} */
+
+.message-date {
+    font-size: 15px;
+    padding-top: 5px;
+}
+

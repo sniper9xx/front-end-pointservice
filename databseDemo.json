@@ -1,0 +1,16 @@
+{
+  "exams" : [
+    {
+      "idExam" : 11010,
+      "nameExam" : "C++",
+      "amountExam" : 60,
+      "dateExam" : "10/11/2019"
+    },
+    {
+      "idExam" : 21010,
+      "nameExam" : "CAD",
+      "amountExam" : 60,
+      "dateExam" : "10/10/2020"
+    }
+  ]
+}

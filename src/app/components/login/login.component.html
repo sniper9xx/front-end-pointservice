@@ -1,0 +1,57 @@
+<div class="login-header">
+  Point Service
+</div>
+
+<div class="login-main">
+
+  <div class="login-main__title">Chào mừng đăng nhập &nbsp;<i style="color: red;" class="fa fa-heart"></i></div>
+  <div class="login-main__desc">Trang web được phát triển bởi Team 2 VTI Academy</div>
+
+  <form  class="form-login" id="form-login" #formLogin="ngForm" (ngSubmit)="onSubmit(formLogin)">
+
+    <div class="form-group">
+      <label for="">Email</label>
+      <span class="valid"><i class="fa fa-check-circle"></i></span>
+      <input id="email" required="required" name="email"
+      required ngModel placeholder=" VD: thanhdat@gmail.com">
+      <span class="message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="">Mật khẩu</label>
+      <span class="valid"><i class="fa fa-check-circle"></i></span>
+      <input type="password" id="password" required="required" name="password"
+      required ngModel placeholder=" Nhập mật khẩu">
+      <span class="message"></span>
+    </div>
+
+    <input type="checkbox" name="" id="">&nbsp; Nhớ mật khẩu
+
+    <button type="submit">Đăng nhập</button>
+
+    <p>Thông tin chi tiết vui lòng liên hệ theo địa chỉ email: team2VTI@gmail.com</p>
+
+    <div class="or">
+      <div class="or1"></div>
+      hoặc
+      <div class="or2"></div>
+    </div>
+
+    <div class="form-login__social">
+      <a href="#" class="social-product"><i class="fa fa-facebook fa-2x"></i></a>
+      <a href="#" class="social-product"><i class="fa fa-youtube fa-2x"></i></a>
+      <a href="#" class="social-product"><i class="fa fa-twitter fa-2x"></i></a>
+    </div>
+
+  </form>
+
+</div>
+
+<label for="">Email</label>
+<span style="color: red;">&nbsp; &nbsp; &nbsp; thanhdat@gmail.com</span>
+<br>
+<label for="">Password</label>
+<span style="color: red;">&nbsp; &nbsp; &nbsp;123456</span>
+
+
+

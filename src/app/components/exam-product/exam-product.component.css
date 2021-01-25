@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.test {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 200px;
+}
+
+.btn-secondary {
+  margin: 10px 0px;
+  height: 40px;
+  width: 120px;
+}
+
+.dropdown-item {
+  padding: 10px;
+}
+
+.search-item {
+  margin-right: 20px;
+}
+
+.dropdown {
+  margin-bottom: 10px;
+}
+
+
+.content-table {
+  position: relative;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin: 30px 0px;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  flex: 5;
+}
+
+.content-table thead {
+  border-bottom: 1px solid #e9e8e8;
+  background-color: white;
+  color: rgb(222, 83, 28);
+  font-weight: bold;
+  text-align: left;
+
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table th {
+    cursor: pointer;
+}
+
+tr:hover:not(thead) {
+  font-weight: bold;
+  color: rgb(81, 61, 124);
+  background-color: rgb(230, 225, 225);
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #e9e8e8;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(81, 61, 124);
+}
+
+table {
+  border: 2px solid #5a5c69;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: rgb(222, 83, 28);
+}
+
+.btn-secondary:focus {
+  background-color: white;
+  color: rgb(222, 83, 28);
+}
+
+.pagination {
+  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color:white;
+  color: rgb(222, 83, 28);
+  border: 1px solid rgb(222, 83, 28);
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.search-exam {
+  transition: all 0.5 ease-out;
+}
+

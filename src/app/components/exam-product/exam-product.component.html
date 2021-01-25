@@ -1,0 +1,57 @@
+<div class="test">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Tìm kiếm
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button" (click)="search('1')">Mã môn học</button>
+      <button class="dropdown-item" type="button" (click)="search('2')">Tên môn học</button>
+    </div>
+  </div>
+  <div *ngIf="check == 1" class="search-exam">
+      <label class="search-item"> Mã môn học</label>
+      <input class="search-item" type="text" [(ngModel)]="idExam">
+  </div>
+  <div *ngIf="check == 2" class="search-exam">
+    <label class="search-item"> Tên môn học</label>
+    <input class="search-item" type="text" [(ngModel)]="nameExam">
+  </div>
+
+  <table class="content-table">
+      <thead>
+          <th>STT</th>
+          <th  (click)="onSort('idExam')">Mã môn học &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th  (click)="onSort('nameExam')">Tên môn học &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th  (click)="onSort('amountExam')">Số lượng &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th  (click)="onSort('dateExam')">Ngày thi &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th>Điều chỉnh</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of exam | examProduct :sortBy : sortValue | filterExam :idExam :nameExam;
+          let i = index" [routerLink]="['/exam-product', item.idExam]">
+              <td>{{ i + 1 }}</td>
+              <td> {{ item.idExam  }}</td>
+              <td>{{ item.nameExam  }}</td>
+              <td>{{ item.amountExam }}</td>
+              <td>{{ item.dateExam | date:'dd/MM/y' }}</td>
+              <td>
+                <a href=""><i class="fa fa-user-times"></i> </a>
+                &nbsp; &nbsp;
+                <a href=""><i class="fa fa-edit"></i></a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
+
+
+
+

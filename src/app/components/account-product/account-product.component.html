@@ -1,0 +1,62 @@
+<div class="test">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Tìm kiếm
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button" (click)="fillNameAccount(1)">Họ</button>
+      <button class="dropdown-item" type="button" (click)="fillNameAccount(2)">Tên</button>
+    </div>
+  </div>
+
+  <div *ngIf="check == 1" class="search-exam">
+    <label class="search-item"> Họ</label>
+    <input class="search-item" type="text" [(ngModel)]="firstName">
+  </div>
+  <div *ngIf="check == 2" class="search-exam">
+    <label class="search-item"> Tên</label>
+    <input class="search-item" type="text" [(ngModel)]="lastName">
+  </div>
+
+
+  <table class="content-table">
+      <thead>
+          <th>STT</th>
+          <th (click)="onSort('firstName')">Họ &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('lastName')">Tên &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('age')">Tuổi &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('address')">Địa chỉ &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('email')">Email &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('role')">Chức vụ &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th (click)="onSort('password')">Mật khẩu &nbsp; <i class="fa fa-angle-down"></i></th>
+          <th>Điều chỉnh</th>
+      </thead>
+      <tbody>
+          <tr  *ngFor="let item of account | sortAccount :sortBy :sortValue | filterAccount :firstName :lastName; let i = index
+          " [routerLink]="['/account-product', item.id]">
+              <td> {{ i + 1 }}</td>
+              <td>{{ item.firstName }}</td>
+              <td>{{ item.lastName  }}</td>
+              <td>{{ item.age  }}</td>
+              <td>{{ item.address  }}</td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.role }}</td>
+              <td>{{ item.password }}</td>
+              <td>
+                <a href=""><i class="fa fa-user-times"></i> </a>
+                &nbsp; &nbsp;
+                <a href=""><i class="fa fa-edit"></i></a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#" class="active">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">&raquo;</a>
+  </div>
+</div>
+

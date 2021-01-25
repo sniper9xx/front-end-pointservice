@@ -1,0 +1,68 @@
+<div class="border-form">
+  <div>
+    <h1>Tạo tài khoản</h1>
+
+    <form>
+
+     <div class="contentform">
+       <div class="leftcontact">
+             <div class="form-group">
+               <p>Họ và tên<span>*</span></p>
+               <span class="icon-case"><i class="fa fa-edit"></i></span>
+                 <input type="text" name="nom" id="nom"  #name/>
+                 <div class="validation"></div>
+        </div>
+
+             <div class="form-group">
+             <p>Lớp<span>*</span></p>
+             <span class="icon-case"><i class="fa fa-edit"></i></span>
+         <input type="text" name="prenom" id="prenom"  #classExam/>
+                 <div class="validation"></div>
+       </div>
+
+       <div class="form-group">
+       <p>Kiểm tra 1 <span>*</span></p>
+       <span class="icon-case"><i class="fa fa-edit"></i></span>
+                 <input type="email" name="email" id="email"  #testMark1/>
+                 <div class="validation"></div>
+       </div>
+
+    </div>
+
+    <div class="rightcontact">
+
+      <div class="form-group">
+        <p>Kiểm tra 2 <span>*</span></p>
+        <span class="icon-case"><i class="fa fa-edit"></i></span>
+                  <input type="text" name="fonction" id="fonction" data-rule="required" #testMark2/>
+                  <div class="validation"></div>
+        </div>
+
+       <div class="form-group">
+       <p>Điểm quá trình<span>*</span></p>
+       <span class="icon-case"><i class="fa fa-edit"></i></span>
+         <input type="text" name="phone" id="phone" data-rule="maxlen:10" #pointProcess/>
+                 <div class="validation"></div>
+       </div>
+
+       <div class="form-group">
+        <p>Điểm thi<span>*</span></p>
+        <span class="icon-case"><i class="fa fa-edit"></i></span>
+                  <input type="text" name="sujet" id="sujet"  #testFinal/>
+                  <div class="validation"></div>
+        </div>
+
+    </div>
+    </div>
+
+      <button type="button" class="bouton-contact"
+      (click)="createExamDetail(name.value, classExam.value, testMark1.value, testMark2.value, pointProcess.value, testFinal.value )"
+      >Tạo tài khoản</button>
+
+
+    </form>
+  </div>
+</div>
+
+
+
